@@ -1,5 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scrol        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="../index.html" class="block py-2 nav-link">Home</a>
+            <a href="../about.html" class="block py-2 nav-link">About Us</a>
+            <a href="../projects.html" class="block py-2 nav-link active">Projects</a>
+            <a href="../blogs.html" class="block py-2 nav-link">Blogs</a>
+            <a href="../contact.html" class="block py-2 nav-link">Contact Us</a>th">
 <head>
     <!-- Meta tags, CSS, and Fonts -->
     <meta charset="UTF-8">
@@ -23,7 +28,7 @@
             <div class="hidden md:flex items-center space-x-8">
                 <a href="index.html" class="nav-link" data-page="home">Home</a>
                 <a href="about.html" class="nav-link" data-page="about">About Us</a>
-                <a href="portfolio.html" class="nav-link active" data-page="portfolio">Projects</a>
+                <a href="../projects.html" class="nav-link active" data-page="projects">Projects</a>
                 <a href="blogs.html" class="nav-link" data-page="blogs">Blogs</a>
                 <a href="contact.html" class="nav-link" data-page="contact">Contact Us</a>
                 <!-- Services Dropdown -->
@@ -33,8 +38,8 @@
                         <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </a>
                     <div id="services-dropdown-menu" class="absolute hidden bg-white shadow-lg rounded-md mt-2 py-2 w-48 z-10 border">
-                        <a href="consultancy.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Consultancy</a>
-                        <a href="events.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Events</a>
+                        <a href="../service/consultancy.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Consultancy</a>
+                        <a href="../service/events.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Events</a>
                     </div>
                 </div>
             </div>
@@ -44,9 +49,9 @@
         </nav>
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
             <a href="index.html" class="block py-2 nav-link">Home</a>
-            <a href="about.html" class="block py-2 nav-link">About Us</a>
-            <a href="portfolio.html" class="block py-2 nav-link active">Projects</a>
-            <a href="blogs.html" class="block py-2 nav-link">Blogs</a>
+            <a href="../about.html" class="block py-2 nav-link">About Us</a>
+            <a href="../projects.html" class="block py-2 nav-link active">Projects</a>
+            <a href="../blogs.html" class="block py-2 nav-link">Blogs</a>
             <a href="contact.html" class="block py-2 nav-link">Contact Us</a>
             <!-- Mobile Services Dropdown -->
             <div>
@@ -55,9 +60,9 @@
                     <svg id="mobile-services-icon" class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                 </button>
                 <div id="mobile-services-menu" class="hidden pl-4">
-                    <a href="services.html" class="block py-2 text-gray-700">All Services</a>
-                    <a href="service/consultancy.html" class="block py-2 text-gray-700">Consultancy</a>
-                    <a href="service/events.html" class="block py-2 text-gray-700">Events</a>
+                    <a href="../services.html" class="block py-2 text-gray-700">All Services</a>
+                    <a href="../service/consultancy.html" class="block py-2 text-gray-700">Consultancy</a>
+                    <a href="../service/events.html" class="block py-2 text-gray-700">Events</a>
                 </div>
             </div>
         </div>
@@ -142,12 +147,12 @@
                 <div>
                     <h3 class="text-xl font-semibold text-red-600 mb-4">Quick Links</h3>
                     <ul class="space-y-2 text-gray-600">
-                        <li><a href="index.html" class="hover:text-red-600">Home</a></li>
-                        <li><a href="about.html" class="hover:text-red-600">About Us</a></li>
-                        <li><a href="projects.html" class="hover:text-red-600">Projects</a></li>
-                        <li><a href="blogs.html" class="hover:text-red-600">Blogs</a></li>
-                        <li><a href="services.html" class="hover:text-red-600">Services</a></li>
-                        <li><a href="contact.html" class="hover:text-red-600">Contact Us</a></li>
+                        <li><a href="../index.html" class="hover:text-red-600">Home</a></li>
+                        <li><a href="../about.html" class="hover:text-red-600">About Us</a></li>
+                        <li><a href="../projects.html" class="hover:text-red-600">Projects</a></li>
+                        <li><a href="../blogs.html" class="hover:text-red-600">Blogs</a></li>
+                        <li><a href="../services.html" class="hover:text-red-600">Services</a></li>
+                        <li><a href="../contact.html" class="hover:text-red-600">Contact Us</a></li>
                     </ul>
                 </div>
 
@@ -193,7 +198,7 @@
             mobileMenuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
 
             const navLinks = document.querySelectorAll('.nav-link');
-            const currentPage = 'portfolio';
+            const currentPage = 'projects';
             navLinks.forEach(link => { if (link.dataset.page === currentPage) { link.classList.add('active'); } });
         });
     </script>
