@@ -1,0 +1,22 @@
+# Security and behavior tweaks for Apache on Hostinger
+
+# Disable directory listing
+Options -Indexes
+
+# Protect common sensitive files
+<FilesMatch "\.(env|ini|log|sh|sql)$">
+  Require all denied
+</FilesMatch>
+
+# Block access to Git or composer files if ever present
+<FilesMatch "^(\.git|composer\.(json|lock))$">
+  Require all denied
+</FilesMatch>
+
+# Basic security headers
+<IfModule mod_headers.c>
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-Content-Type-Options "nosniff"
+  Header set Referrer-Policy "no-referrer-when-downgrade"
+  # Note: Content-Security-Policy omitted to avoid blocking CDN assets; add later if desired
+</IfModule>
